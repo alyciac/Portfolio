@@ -1,0 +1,305 @@
+
+*{
+    font-size: 1em;  
+}
+
+body{
+    width: 100%;
+    background-image: url(largebackground.jpg); 
+    background-position: center top; 
+    background-repeat: no-repeat; 
+    font-family: Arial, Helvetica, sans-serif;  
+    background-attachment: fixed;
+    background-size: cover; 
+    margin: 0; 
+    padding: 0; 
+    
+}
+
+header {
+    height: 155px;
+    width: 100%; 
+    position: fixed;
+    right:0; 
+    top:0; 
+    margin: 0; 
+}
+
+.headerlight{
+    background-color: rgba(245, 245, 245, 0.9); 
+    transition: 2s; 
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.headerdark{
+    background-color: whitesmoke; 
+    transition: 2s; 
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+#logo {
+    font-family: 'Poiret One', cursive;
+    max-width: 400px; 
+    max-height: 70px; 
+    padding-left: 135px; 
+    margin-top: 0; 
+    padding-top: 0; 
+    
+}
+
+#a{
+    -webkit-text-stroke; 1px; 
+    color: #33cccc; /*aqua*/
+    font-size: 8em; 
+    margin: 0; 
+    width: 37.5%; 
+    display: inline; 
+}
+
+#c{
+    color: #33cccc; /*aqua*/
+    -ms-transform: rotate(-18deg); /* IE 9 */
+    -webkit-transform: rotate(-18deg); /* Chrome, Safari, Opera */
+    transform: rotate(-18deg);
+    font-size: 7.056em; 
+    width: 26%; 
+    max-height: 65px; 
+    display: inline-block;
+    margin-left: -70px; 
+    margin-top: 0; 
+}
+
+#name{
+    -webkit-text-stroke: 1.5px; 
+    color: dimgray; 
+    font-size: 1.6132em; 
+    margin-left: 100px; 
+    margin-top: -110px; 
+}
+
+
+#logotitle{
+    font-size: 1.07547em; 
+    color: dimgray; 
+    letter-spacing: 1.15px; 
+    margin-left: 100px; 
+    margin-top: -25px; 
+}
+
+#logotitle span{
+    color: mediumturquoise;
+}
+
+#logo:after{
+    content: ''; 
+    display: block; 
+    clear: both; 
+}
+
+nav{
+    padding-top: 3%; 
+    margin-bottom: 10px; 
+    width: 30%; 
+    float: right;
+    display: inline;  
+    clear: left; 
+}
+
+nav a {
+    text-decoration: none; 
+    font-size: 1em; 
+    color: dimgray; 
+    display: inline; 
+    text-align: left;
+    padding-left: 15px;
+    margin-left: 5px; 
+    border-top-color: whitesmoke;
+    -webkit-transition: border-top-color 2s;
+    transition: border-top-color 2s;
+}
+
+nav a:visted{
+    color: dimgray; 
+}
+
+nav a:active{
+    color: dimgray; 
+}
+
+nav a:hover{
+    border-top-width: 5px; 
+    border-top-style: solid; 
+    border-top-color: mediumturquoise;
+}
+
+nav:after{
+    content: ''; 
+    display: block; 
+    clear: both; 
+}
+
+.hero {
+    background-color: mediumturquoise; 
+    position: static; 
+    font-family: Arial, Helvetica, sans-serif; 
+    margin-top: 40%; 
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+    margin-bottom: 0; 
+}
+
+.hero, .chunkedcontent {
+    width: auto;
+    padding-left:10%; 
+    padding-right:10%; 
+    overflow: auto; 
+}
+
+#tagline{
+    font-size: 3em; 
+    color: dimgray; 
+    margin: 0;  
+    padding-left: 5%; 
+}
+
+#tagline span{
+    color: whitesmoke; 
+}
+
+.chunkedcontent{
+    background-color: whitesmoke;
+}
+
+.chunkedacontent:after{
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+#skills h2, .bluebox h2{ 
+    font-weight: normal; 
+    font-size: 3em; 
+    text-align: center;
+    margin-bottom: 0; 
+    
+}
+
+#skills h2{
+    color: mediumturquoise;
+}
+
+#skills p, .bluebox p{
+    color: dimgray; 
+    font-family: 'Arial', Helvetica, sans-serif; \
+    font-weight: normal; 
+}
+
+#skills li{
+    color: dimgray;
+    font-size: 1.1em;
+}
+
+#skills {  
+    display: inline; 
+    position: static; 
+    
+}
+
+#skills h3{
+    font-family: 'Arial', Helvetica, sans-serif; 
+    font-size: 1.25em; 
+    font-weight: normal;
+    color: mediumturquoise;
+}
+
+#skills a {
+    text-decoration: none; 
+    color: mediumturquoise;
+}
+
+#list1, #list2{
+    float: left; 
+    width: 30%; 
+    display: inline-block;
+}
+
+#list1 {
+    margin-left: 20%; 
+    padding-bottom: 2%; 
+}
+
+#list2{
+    margin-right: 20%; 
+    padding-bottom: 2%; 
+}
+
+.feature{
+    height: auto; 
+    background-color: white;
+    padding-left: 10%; 
+    padding-right: 10%;
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+    width: auto;
+    
+}
+
+.feature p{
+    color: dimgray; 
+}
+
+.feature img{
+    float: left; 
+    width: 100%; 
+    padding-right: 3%;
+}
+.featuretext h2{
+    font-size: 2.5em; 
+    color: mediumturquoise; 
+    font-weight: normal;
+}
+
+.featuretext:after{
+    content: ''; 
+    display: block; 
+    clear: both; 
+}
+
+.featuretext a{
+    text-decoration: none; 
+    color: mediumturquoise;
+}
+
+
+.bluebox {
+    background-color: mediumturquoise;  
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+    width: 100%; 
+}
+
+.bluebox h2{
+    color: whitesmoke; 
+    margin: 0;
+}
+
+.bluebox p{
+    text-align: center; 
+    font-size: 1.2em; 
+    margin-top: .7%; 
+}
+
+.bluebox span{
+    color: whitesmoke; 
+    font-size: 1.25em; 
+}
+
+.mobilenav{
+    display: none; 
+}
+
+/* mobile landscape layout (480 to 767)*/
+

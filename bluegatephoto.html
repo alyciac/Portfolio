@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Alycia Cahill | Designer / Developer | Seattle, WA</title>
+    <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+    <meta name="description" content="My client had done the previous site herself and was unhappy with the result. I created for a WordPress site that was easy to update, had a new modern look, and a custom blog to increase online traffic.  Read how I created an easy to update  Carousel using a couple of lines of PHP code and helped my client grow her business.">
+    
+    <meta name="keywords" content="WordPress, Carousel, Code, PHP, HTML, CSS, Design, Web Development, Template, Photography Website Design">
+    
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Damion|Fredericka+the+Great' rel='stylesheet' type='text/css'>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <link href="javascript/lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+
+    <script>
+        window.onscroll = function() {myHeaderFunction()};
+
+        function myHeaderFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("theheader").className = "headerdark";
+        } else {
+        document.getElementById("theheader").className = "headerlight";
+        }
+}
+</script>
+</head>
+<body>
+    
+    <header id="theheader" class="headerlight">
+        <a href="index.html">
+            <div id="logo">
+                <h1 id="a">A</h1><h1 id="c">C</h1>
+                <h2 id="name">ALYCIA CAHILL</h2>
+                <h3 id="logotitle">designer <span>/</span> developer</h3>
+            </div>
+        </a>
+        <nav>
+            <!---eventually need an about me section-->
+            <a href="work.html">work</a>
+            <a href="alyciacahillresume.html">resume</a>
+            <a href="https://github.com/alyciac">github</a>
+            <a href="https://www.linkedin.com/in/alycia-cahill-7267661a">linkedin</a>
+            <!---untill I get the form up
+            <a href="#contact">contact</a>
+            -->
+        </nav>
+    </header>
+
+<!---Fun Starts Here--->
+    <section class="hero">
+        <h2 id="pagetitle">
+            work
+        </h2>
+   </section>
+    
+<section class="feature">
+    <a href="images/bluegatehomebig.jpg" data-lightbox="image-top" data-title="Blue Gate Photo Homepage">
+        <img class="leftimg" src="images/bluegatehome.jpg">
+    </a>
+    <div class="text">
+        <a href="http://www.bluegatephoto.com"><h1>Blue Gate Photography</h1></a>
+        <p>
+            Nicole, photographer and owner of Blue Gate Photography, had done the previous site herself and was unhappy with the result. She needed something to show potential clients and use as a tool to increase her web presence.   Working together we discovered what her users needed and what she needed for her business to grow.
+        </p>
+        <p>
+            After speaking with Nicole and extensive research, I came up with a plan. Her site needed a complete overhaul and would include:
+        </p>
+            <ul>
+                <li>
+                    A simple interface, for uploading images and updating content.
+                </li>
+                <li>
+                    An updated, modern look and feel, to match the tone of her photography. 
+                </li>
+                <li>
+                    A custom blog to drive traffic to the site increase online presence. 
+                </li>
+            </ul>
+
+        <h2>An Easy to Update Site</h2>
+        <p>Photography is a cyclical business.  Photographs on sites must be updated with the seasons to keep up with current trends and changing technology.  Nicole needed a site that was easy to update; without having to know a bunch of code.  
+        </p>
+        <p>
+            I built her new site using WordPress.  WordPress allows me to create custom capabilities to fit my client's business needs, and the user interface allows them to have control over the content on their site.  
+        </p>
+        <h3>Creating an Easy to Update Carousel</h3>
+        <p>
+            I developed an easy to update carousel in two places.  That way Nicole could update her photos easily, and changing the look and feel of her site when needed.  The best part was the updates could be made in the easy to use WordPress interface. 
+
+        </p>
+        <p>
+        I started with Woo Hoos Theme&rsquo;s FlexSlider and made a little modifications. I like Flexslider because it is responsive and simple to modify.  Just before the ordered list I placed a little bit of PHP: <br>
+        </p>
+
+        <code class="smallindent">&lt;?php $gallery=get_post_meta($post->ID, gallery, false); ?></code>
+
+        <p> get_post_meta&#40;&#41; fetches the metadata for the post, and Key &#40;or name on the user interface&#41; and Value. I had previously added the <q>Gallery</q> Key and the Value is the url of the image. The boolean parameter specifies if there is a single image, in this case “false.” It basically says, <q>Sweet! I get to grab a bunch of these cool 	&#8216;Gallery&#8217; things for a super cool array.</q>
+        </p>
+        
+        <p>I added a foreach loop in the ordered list to update each slide with the inputted key value pair now in the array.</p>
+        
+        <code>
+            <div class="smallindent">&#060;ol class="slides"&#062;<br></div>
+            <div class="indent">
+            &#060;?php foreach&#40;$gallery as $gallery&#41;&#123;<br>
+            echo&#39;&#060;li&#062; &#060;imh src="&#39;.$gallery.&#39;" alt="spotlight image"/&#062;&#060;/li&#062;&#39;; <br>
+            &#125; ?&#062; 
+            </div>
+            <span class="smallindent">&#060;&#47;ol&#062;</span>
+        </code>
+        <p>
+            Here is the html for the FlexSlider with the additions I made:
+        </p>
+        <code>
+            <div class="smallindent">&#060;div id="frontslideshow"&#062;</div>
+            <div class="indent">
+                &#060;div class="flexslider"&#062;
+            </div>
+
+            <div class="indenttwo">
+                &lt;?php $gallery=get_post_meta($post->ID, gallery, false); ?><br>
+                &#060;ol class="slides"&#062;
+            </div>
+            <div  class="indentthree">
+                &#060;?php foreach&#40;$gallery as $gallery&#41;&#123;<br>
+                echo&#39;&#060;li&#062; &#060;imh src="&#39;.$gallery.&#39;;" alt="spotlight image"/&#062;&#060;/li&#062;&#39;;
+                &#125; ?&#062; 
+            </div>
+
+            <div class="indenttwo">&#060;/ol&#062; </div>
+
+            <div class="indent">
+                &#060;/div&#062;
+            </div>
+
+            <span class="smallindent">&#060;&#47;div&#062;</span>
+        </code>
+    </div>
+        
+    <p>
+       The result is an easy to use, easy to update image carousel. Using the Wordpress interface she just updates the carousel using images uploaded to her Image Library. She loves how easy it is to use and that she can update her site on her own.  Now she can update her site with more cute photos for every season!    
+    </p>
+    
+    <figure>
+        <a href="images/customfields.jpg" data-lightbox="image-customfields" data-title="The Wordpress Interface.">
+            <img class="bigimg" src="images/customfields.jpg" alt="Image of the WordPress interface."/><br>
+        </a>
+    </figure>
+    
+    <h2>A New Modern Look</h2>
+    <p>The client, Nicole, knew that her site was dated.</p>
+    
+    <p>The site&#39;s technology was old and clunky.  Flash and a non-responsive layout rended unusable on mobile devices, where her potential clients where.</p>
+    
+    <p>The technology wasn&#39;t just difficult for her clients, it was difficult for her too. Because she had difficulty updating content, the site ended being neglected, and only her old work remained on there. The site no longer reflected her style as a photographer.
+    </p>
+    
+    <h3>A design to let the photography shine.</h3>
+    
+    <p>A clean uncluttered design would best showcase Nicole’s beautiful work. I incorporated soft colors and stylized typography to match the dreamy feel of her images. 
+    </p>
+    
+    <figure class="threeimages">
+        <a href="images/designstudies/arthome.png" data-lightbox="designstudy"><img src="images/designstudies/arthomesmall.png"></a>
+        <a href="images/designstudies/cherryhome.png" data-lightbox="designstudy">
+            <img src="images/designstudies/cherryhomesmall.png"></a>
+        <a href="images/designstudies/minhome.png" data-lightbox="designstudy"><img src="images/designstudies/minhomesmall.png"></a>
+    </figure>
+    
+    <p>I presented Nicole with three options, which she loved, making it hard for her to decide on a final design.  A asked her about her favorite components of each design, and after some quick revisions, we had our final and <b>our</b> favorite design. 
+    </p>
+    
+    <a href="images/designstudies/justanotheroption.png" data-lightbox="designstudy">
+    <img class="bigimg" src="images/designstudies/justanotheroption.png">
+    </a>
+    
+    <h2>A Blog to Build Business</h2>
+    <p>Blogging has become pivotal to photographers, it increases web presence and attracts potential customers.  And in Nicole’s case it was also a way for her to share her passion with other photographers.  
+    </p>
+    
+    <p>Her previous blog has some usability issues.  It was external site with a completely different look and feel, and was jarring to the user.  All her posts were on one page, resulting in an overwhelming mass stream of images.  
+    </p>
+    
+    <h3>Creating the Matching Blog</h3>
+    <p>Since I built her site in WordPress, I was able to design and develop a blog that would be apart of her site, matching it visually.  </p>
+    
+    <p>To allow a visitor to see a glimpse of the blog posting while enticing them to click to see more I added some custom capabilities to the blog.  The blog landing page would have recent postings with a thumbnail image and excerpt to entice users to read her latest post. I also added a banner, that was easy to update and change herself.
+    </p>
+    
+    <p>
+    The result was a blog that matched the rest of her site, with clean lines and soft colors. In addition, was easier for the user to be able to navigate. Now her blog was a part of her site, leading to better continuity, more professional and a better user experience.  All she has to do is update it with her most recent posts.
+    </p>
+    
+    <figure>
+        <a href="images/blog.jpg" data-lightbox="image-2" data-title="The blog landing page.">
+            <img class="bigimg" src="images/blog.jpg" alt="Blog landing page.">
+        </a>
+    </figure> 
+</section>
+    
+    
+    <footer id="contact" class="bluebox">
+            <h2>let's chat!</h2>
+            <p>
+                I am looking for new oppurtunities.  If you would like to talk, contact me at: <br>
+                <span>alycia.cahill@gmail.com </span>
+            </p>
+    </footer>
+
+    <script src="javascript/lightbox2-master/src/js/lightbox.js"></script>
+
+</body>
+</html>

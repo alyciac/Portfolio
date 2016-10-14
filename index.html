@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Alycia Cahill | Designer / Developer | Seattle, WA</title>
+    <meta name="description" content="I love to solve problems with design and code. I understand the importance of a well designed site and what it takes to create one.  I can assist with the needs of any project, from a complete overhaul to updating a current site for mobile web.">
+    
+    <meta name="keywords" content="design, develpment, UX, UX design, Seattle, to hire, web, code, mobile, responsive design, resposive, WordPress, PHP, HTML, CSS3, writing web content">
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+   
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    
+    <script>
+        window.onscroll = function() {myHeaderFunction()};
+
+        function myHeaderFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("theheader").className = "headerdark";
+        } else {
+        document.getElementById("theheader").className = "headerlight";
+            }
+        }
+    </script>
+    <script>
+       $(document).ready(function(){
+	       $('a[href^="#"]').on('click',function (e) {
+	       e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 1000, 'swing',);
+	   });
+       });
+    </script>
+</head>
+<body>
+    
+    <header id="theheader" class="headerlight">
+        <div id="logo">
+            <h1 id="a">A</h1><h1 id="c">C</h1>
+            <h2 id="name">ALYCIA CAHILL</h2>
+            <h3 id="logotitle">designer <span>/</span> developer</h3>
+        </div>
+        <nav id="desktopnav">
+            <a href="work.html">work</a>
+            <a href="alyciacahillresume.html">resume</a>
+            <a href="https://github.com/alyciac">github</a>
+            <a href="https://www.linkedin.com/in/alycia-cahill-7267661a">linkedin</a>
+            <!---untill I get the form up
+            <a href="#contact">contact</a>
+            -->
+        </nav>
+        <nav id="mobilenav">
+            <a href="work.html">work</a>
+            <a href="alyciacahillresume.html">resume</a>
+            <a href="https://github.com/alyciac">github</a>
+            <a href="https://www.linkedin.com/in/alycia-cahill-7267661a">linkedin</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p id="tagline">
+            I love to solve problems with <span>design</span> and <span>code</span>
+        </p>
+   </section>
+    
+    <section class="chunkedcontent">
+        <div id="skills">
+            <h2>design + code</h2>
+            <p>
+                As a designer that can code, I understand the importance of a well designed site and what it takes to create one.  I can assist with the needs of any project, from a completeoverhaul to updating a site for the mobile web. 
+            </p>
+            <p>   
+                Take a look at my <a href="work.html">work</a> to see what I have created in the past or <a href="#contact">let's chat</a> to see how I can help you.
+            </p>
+            <div id="list1">
+                <h3>
+                    Design Skills and Programs I Use
+                </h3>
+                    <ul>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                        <li>UX Research &amp; Design</li>
+                        <li>Web Content Writing</li>
+                        <li>Responsive Design</li>
+                        <li>SEO</li>
+                    </ul>
+            </div>
+            <div id="list2">
+                <h3> 
+                    Coding Languages and Skills
+                </h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS3</li>
+                    <li>JavaScript &amp; JQuery</li>
+                    <li>WordPress Development</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature">
+            <img src="images/bluegate_03.jpg" alt="Blue Gate Photography Homepage" style="width:299px;height: 313px;">
+                
+                <div class="featuretext">
+                    <h2>Featured Work: Blue Gate Photography</h2>
+                    <p>
+                         Nicole, photographer and owner of Blue Gate Photography, had done the previous site herself and was unhappy with the result. She needed something to show potential clients and use as a tool to increase her web presence.   Working together we discovered what her users needed and what she needed for her business to grow.
+                        <a href="bluegatephoto.html">
+                            Read more...
+                        </a>
+                    </p>
+                    <a href="work.html">See my other work.</a>
+                </div>
+    </section>
+    
+    <footer id="contact" class="bluebox">
+            <h2>let's chat!</h2>
+            <p>
+                I am looking for new oppurtunities.  If you would like to talk, contact me at: <br>
+                <span>alycia.cahill@gmail.com </span>
+            </p>
+    </footer>
+
+
+</body>
+</html>

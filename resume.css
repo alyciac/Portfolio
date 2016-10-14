@@ -1,0 +1,315 @@
+
+*{
+    font-size: 1em;  
+}
+
+body{
+    width: 100%;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;  
+    margin: 0; 
+    padding: 0; 
+}
+a {
+    text-decoration: none; 
+}
+
+header {
+    height: 155px;
+    width: 100%; 
+    right: 0; 
+    top: 0; 
+    margin: 0;
+    margin-bottom: 1em; 
+    border-bottom: 3px dotted whitesmoke; 
+}
+
+#logo {
+    font-family: 'Poiret One', cursive;
+    max-width: 400px;
+    width: 42.555319149%;
+    max-height: 70px; 
+    padding-left: 135px; 
+    margin-top: 0; 
+    padding-top: 0;
+}
+
+#a{
+    -webkit-text-stroke; 1px; 
+    color: #33cccc; /*aqua*/
+    font-size: 8em; 
+    margin: 0; 
+    width: 37.5%; 
+    display: inline; 
+}
+
+#c{
+    color: #33cccc; /*aqua*/
+    -ms-transform: rotate(-18deg); /* IE 9 */
+    -webkit-transform: rotate(-18deg); /* Chrome, Safari, Opera */
+    transform: rotate(-18deg);
+    font-size: 7.056em; 
+    width: 26%; 
+    max-height: 65px; 
+    display: inline-block;
+    margin-left: -70px; 
+    margin-top: 0; 
+}
+
+#name{
+    -webkit-text-stroke: 1.5px; 
+    color: dimgray; 
+    font-size: 1.6132em; 
+    margin-left: 100px; 
+    margin-top: -110px; 
+}
+
+
+#logotitle{
+    font-size: 1.07547em; 
+    color: dimgray; 
+    letter-spacing: 1.15px; 
+    margin-left: 100px; 
+    margin-top: -25px; 
+}
+
+#logotitle span{
+    color: mediumturquoise;
+}
+
+#logo:after{
+    content: ''; 
+    display: block; 
+    clear: both; 
+}
+
+nav{
+    padding-top: 3%;  
+    width: 40%; 
+    float: right;
+    display: inline;  
+    clear: left;
+    padding-right: 10%; 
+}
+
+nav a {
+    text-decoration: none; 
+    font-size: 1em; 
+    color: dimgray; 
+    display: inline; 
+    text-align: left;
+    padding-left: 15px;
+    margin-left: 5px; 
+    border-top-color: whitesmoke;
+    -webkit-transition: border-top-color 2s;
+    transition: border-top-color 2s;
+}
+
+nav a:visted{
+    color: dimgray; 
+}
+
+nav a:active{
+    color: dimgray; 
+}
+
+nav a:hover{
+    border-top-width: 5px; 
+    border-top-style: solid; 
+    border-top-color: mediumturquoise;
+}
+
+nav:after{
+    content: ''; 
+    display: block; 
+    clear: both; 
+}
+
+main{
+    width: 100%; 
+}
+
+aside{
+    float: left; 
+    padding-left: 10%;  
+    width: 20%; 
+    border-right-color: whitesmoke; 
+    border-right-width: 3px; 
+    height: 100%; 
+}
+
+aside a{
+    text-decoration: none; 
+    color: dimgray; 
+}
+
+aside a:visted{
+    text-decoration: none; 
+    color: dimgray; 
+}
+
+aside a:link{
+    text-decoration: none; 
+    color: dimgray; 
+}
+
+aside ul{
+    padding-left: 0px; 
+    margin-top: 0px; 
+}
+
+aside ul li{
+    list-style: none; 
+    font-family: Arial, Helvetica, sans-serif; 
+    padding: 5px; 
+    color: dimgray; 
+}
+
+.resume{
+    float: left; 
+    padding-left: 2%; 
+    color: dimgray; 
+    width: 70%; 
+}
+
+.resume h2{
+    color: mediumturquoise; 
+    font-family: 'Poiret One', cursive;
+    font-weight: bold; 
+    font-size: 1.75em; 
+    padding-bottom: 0px;  
+    margin-bottom: 0px; 
+    margin-top: 0;  
+}
+
+.resume h3{
+    color: dimgray; 
+    font-size: 1.25em; 
+    font-weight: normal; 
+    margin: 0;  
+    padding-top: .5%; 
+}
+
+.resume ul{
+    list-style-type:circle; 
+    margin: 0; 
+    padding-bottom: 1%; 
+}
+
+.resume p{
+    margin-top: 0; 
+}
+
+.one{
+    float: left; 
+    padding-right: 2%; 
+}
+
+.two {
+    float: left; 
+}
+
+.one li{
+    padding-bottom: 1%; 
+}
+
+.two li{
+    padding-bottom: 1%; 
+}
+
+#skills:after{
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+.resume:after{
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+@media print{
+    
+    body{
+        background-color: white; 
+        color: dimgray; 
+    }
+    
+    nav{
+        display: none; 
+    }
+    
+    #logo{
+        padding-left: 0; 
+        padding-bottom: 0; 
+        margin-bottom: 0;  
+    }
+    
+    main{ 
+        color: dimgray; 
+        padding-left: 2%; 
+        padding-right: 2%; 
+    }
+    
+    sidebar{
+        width: 100%; 
+        padding-left: 0; 
+        margin: 0; 
+        padding-bottom: 0; 
+        color: dimgray; 
+    }
+    sidebar ul{
+        margin-top: 5px; 
+        margin-bottom: 5px; 
+        margin-left: 0; 
+        margin-right: 0; 
+        padding: 0; 
+    }
+    
+    sidebar li{
+        display: inline; 
+        color: dimgray;
+    }
+    
+    main{
+        margin: 0; 
+        padding: 0; 
+    }
+    
+    main h2{
+        padding-top: 5.5%; 
+        margin-top: 0; 
+        page-break-after: avoid; 
+        color: dimgray;
+    }
+    
+    main h3{
+        page-break-after: avoid; 
+        color: dimgray; 
+    }
+    
+    #experience{
+        break-before: always;
+        page-break-before: always; 
+    }
+    
+    #a{
+        font-size: 7.75em; 
+        padding-top: 10px;
+    }
+    
+    #c{
+        margin-left: -70px; 
+        font-size: 7.1em;  
+        width: 33%;
+    }
+    
+    header{
+        border-bottom-color: lightgrey;
+    }
+}
